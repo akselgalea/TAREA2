@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea2</title>
+
+    <link rel="stylesheet" href="style/main.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form class="row g-3 needs-validation" id="formu" novalidate>
+            <div class="form-group col-md-6 col-12">
+                <label for="fullname">Nombre completo</label>
+                <input type="text" class="form-control" id="fullname" placeholder="Axel William Ormeño Galea" required>
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Por favor llene este campo.</div>
+            </div>
+
+            <div class="form-group col-md-6 col-12">
+                <label for="rut">RUT:</label>
+                <input type="text" class="form-control" id="rut" placeholder="11111111-1" name="rut" pattern="\d{3,8}-[\d|kK]{1}" required>
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Por favor ingrese el rut sin puntos  y con guion.</div>
+            </div>
+            
+            <div class="form-group col-md-6 col-12">
+                <label for="email">Correo Electronico:</label>
+                <input type="email" class="form-control" id="email" placeholder="example@example.cl" name="email" required>
+                <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Por favor llene este campo.</div>
+            </div>
+
+            <div class="form-group col-md-6 col-12">
+                <label for="phone">Telefono Movil:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">+56</span>
+                    </div>
+                    <input type="text" class="form-control" id="phone" placeholder="971636507" name="phone" pattern="[0-9]{9}" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor llene este campo.</div>
+                </div>
+            </div>
+
+            <div class="option-forms row col-sm-12">
+                <div class="form-group col-md-6 col-12">
+                    <p class="form-question">Seleccionar uno o mas lenguajes de programacion de un interes</p>
+                    <!-- pl = programming languages -->
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="python" name="pl" value="python">
+                        <label class="custom-control-label" for="python">Python</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="typescript" name="pl" value="typescript">
+                        <label class="custom-control-label" for="typescript">TypeScript</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="cpp" name="pl">
+                        <label class="custom-control-label" for="cpp">C++</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="csharp" name="pl" value="csharp">
+                        <label class="custom-control-label" for="csharp">C#</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="php" name="pl" value="php">
+                        <label class="custom-control-label" for="php">PHP</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="ruby" name="pl" value="ruby">
+                        <label class="custom-control-label" for="ruby">Ruby on Rails</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="java" name="pl" value="java">
+                        <label class="custom-control-label" for="java">Java</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="r" name="pl" value="r">
+                        <label class="custom-control-label" for="r">R</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="groovy" name="pl" value="groovy">
+                        <label class="custom-control-label" for="groovy">Groovy</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="go" name="pl" value="go">
+                        <label class="custom-control-label" for="go">Go</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="swift" name="pl" value="swift">
+                        <label class="custom-control-label" for="swift">Swift</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="kotlin" name="pl" value="kotlin">
+                        <label class="custom-control-label" for="kotlin">Kotlin</label>
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Por favor rellene alguna de las opciones.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <p class="form-question">Cual es su nivel de experiencia en programacion?</p>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="alto" name="optradio" value="alto" required>
+                            <label class="custom-control-label" for="alto">Alto</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="medio" name="optradio" value="medio" required>
+                            <label class="custom-control-label" for="medio">Medio</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="bajo" name="optradio" value="bajo" required>
+                            <label class="custom-control-label" for="bajo">Bajo</label>
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Por favor llene este campo.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group col-md-6 col-12">
+                    <div class="form-group">
+                        <p class="form-question multi-q">Nivel de conocimiento sobre los siguientes lenguajes de programacion</p>
+                        <div class="form-group">
+                            <label for="range-python">Python</label>
+                            <input type="range" class="custom-range" name="range-python">
+                        </div>
+                        <div class="form-group">
+                            <label for="range-java">Java</label>
+                            <input type="range" class="custom-range" name="range-java">
+                        </div>
+                        <div class="form-group">
+                            <label for="range-cpp">C++</label>
+                            <input type="range" class="custom-range" name="range-cpp">
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Por favor llene este campo.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group multi-q">
+                        <p class="form-question">Seleccione cual de los siguientes cursos les ha tomado mayor dificultad</p>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="edd" name="cursos" value="edd">
+                            <label class="custom-control-label" for="edd">Estructura de Datos</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input " id="ia" name="cursos" value="ia">
+                            <label class="custom-control-label" for="ia">Inteligencia Artificial</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="ihc" name="cursos" value="ihc">
+                            <label class="custom-control-label" for="ihc">Interaccion Humano-Computador</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="so" name="cursos" value="so">
+                            <label class="custom-control-label" for="so">Sistemas Operativos</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control cursos" id="otro" placeholder="Otro" name="cursos">
+                            <div class="valid-feedback">Valido.</div>
+                            <div class="invalid-feedback">Por favor rellene alguna de las opciones.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="opinion">Queremos conocer su opinion acerca de la escuela</label>
+                        <textarea class="form-control" name="opinion" id="opinion" minlength="1" maxlength="500" rows="3" required></textarea>
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Por favor llene este campo.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar datos</button>
+                <button id="limpiar" type="button" class="btn btn-danger">Limpiar formulario</button>
+            </div>
+        </form>
+
+        <div id="done-msg">
+            <h2>Hemos recibido sus datos, pronto nos estaremos comunicando con usted</h2>
+            <p class="done-check">✅</p>
+        </div>
+    </div> 
+
+    <script data-main="scripts/main" src="scripts/require-jquery.js"></script>
+</body>
+</html>

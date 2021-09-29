@@ -1,0 +1,26 @@
+{
+  "name": "tarea2",
+  "version": "1.0.0",
+  "description": "Tarea numero 2 de ingenieria web",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akuseryuinc/TAREA2.git"
+  },
+  "author": "Axel Ormeño",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akuseryuinc/TAREA2/issues"
+  },
+  "homepage": "https://github.com/akuseryuinc/TAREA2#readme",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.6"
+  }
+}
